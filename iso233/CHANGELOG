@@ -1,8 +1,0 @@
-v1.00 2021-03-01
-Initial version. A textbox, a button and a checkbox.
-
-v1.01: 2021-03-01
-- allowed lowercase D with underdot to be typed. It was missing from the table.
-
-v1.02: 2021-03-01
-- ensure that checkbox does not go out of sync after page refresh.

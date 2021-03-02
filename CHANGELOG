@@ -3,3 +3,18 @@
 - I added a checkbox with functionality.
 - I started the project as a way to type ISO233 characters without installing an extra keyboard.
 
+    v1.00 2021-03-01
+    Initial version. A textbox, a button and a checkbox.
+
+    v1.01: 2021-03-01
+    - allowed lowercase D with underdot to be typed. It was missing from the table.
+
+    v1.02: 2021-03-01
+    - ensure that checkbox does not go out of sync after page refresh.
+
+2021-03-01 v1.10
+- Switched to generating code using a template. Now a language can be added by adding two files, one
+for the name of the language, and another for the substitutions that it supports. The developer then must
+edit the shell script "generateWebPages.sh" and run it, and it should produce a suitable result.
+
+At the same time the following orthographies have been added: French, Spanish or Portuguese, Maltese and Berber Latin alphabet.
