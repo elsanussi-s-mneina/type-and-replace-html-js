@@ -34,3 +34,7 @@ At the same time the following orthographies have been added: French, Spanish or
 - Add support for Irish
 - Add support for Scottish Gaelic
 - Add support for Latin
+
+2021-03-02 v1.20
+- Generate a spreadsheet formula (useful for people who use spreadsheet applications)
+- Generate terminal command using Python 3 (for people who work on the command line)

@@ -27,6 +27,13 @@
 
 	</div>
 
+	<!-- The following will be populated with any extra information for our users. -->
+	<button onclick="viewExcelFormula()">Get Spreadsheet Formula to do this.</button>
+	<button onclick="viewPythonFormula()">Get Terminal Command to do this.</button>
+
+	<div id="extraGoodies" style="font-family: times; font-size: large">
+	</div>
+
 	<footer>
 		<p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/type-and-replace-html-js">Get source code and documentation: v1.11, (2021-03-01). Made by Elsanussi Mneina</a></p>
 	</footer>  
@@ -70,10 +77,66 @@
 			]
 		;
 
+		function createSpreadsheetFormula()
+		{
+			var extraGoodies = document.getElementById("extraGoodies");
+
+			var spreadsheetFormula = "B2";
+
+			for (var i = 0; i < replacements.length; i++)
+			{
+				spreadsheetFormula = "SUBSTITUTE(" + spreadsheetFormula + ", \"" + replacements[i][0] + "\", \"" + replacements[i][1] + "\")";
+			}
+
+			extraGoodies.innerHTML = "<h3>Equivalent Spreadsheet Formula</h3><p>The worksheet (Excel, LibreOffice) formula for converting text from cell B2 is =" + spreadsheetFormula + "</p>";
+		}
+
+
+		function encodeUnicodeString(aString)
+		{
+			outputString = "";
+			for (var i = 0; i < aString.length; i++)
+			{
+				var unicodeValueString = aString.codePointAt(i).toString(16);
+
+				while (unicodeValueString.length < 4)
+				{
+					unicodeValueString = "0" + unicodeValueString;
+				}
+				outputString += "\\u" + unicodeValueString;
+			}
+
+			return outputString;
+		}
+
+		function createPythonFormula()
+		{
+			var pythonFormula = ""
+
+			for (var i = 0; i < replacements.length; i++)
+			{
+				pythonFormula = pythonFormula + ".replace( \\\"" + encodeUnicodeString(replacements[i][0]) + "\\\", \\\"" + encodeUnicodeString(replacements[i][1]) + "\\\")";
+			}
+
+			pythonFormula = "import sys; print(sys.stdin.read()" + pythonFormula + ")";
+			var terminalFormula = "python3 -c \"" + pythonFormula + "\"" + " < ./inputFile.txt > ./outputFile.txt"
+			extraGoodies.innerHTML = "<h3>Equivalent Terminal Command using Python 3</h3><p>" + terminalFormula + "</p>";
+
+		}
+
+		function viewExcelFormula()
+		{
+			createSpreadsheetFormula();
+		}
+
+		function viewPythonFormula()
+		{
+			createPythonFormula();
+		}
+
 		function setUp()
 		{
 			setUpLegend();
-
 			// The following call ensures that the
 			// checkbox and normalization lock
 			// do not become out of sync after a page refresh.
