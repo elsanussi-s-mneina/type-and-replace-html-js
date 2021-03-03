@@ -35,7 +35,7 @@
 	</div>
 
 	<footer>
-		<p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/type-and-replace-html-js">Get source code and documentation: v1.11, (2021-03-01). Made by Elsanussi Mneina</a></p>
+		<p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/type-and-replace-html-js">Get source code and documentation: v1.21, (2021-03-03). Made by Elsanussi Mneina</a></p>
 	</footer>  
 
 	<script>
@@ -146,30 +146,28 @@
 		function transformCharacters()
 		{
 			var oldInput = document.getElementById("userInputBox").value;
-			
-			if (oldInput.length >= 2)
+		
+			var newInput = "";
+			var replacedCurrentChar = false;
+			for (var i = 0; i < oldInput.length; i++)
 			{
-				var newInput = "";
-				var replacedCurrentChar = false;
-				for (var i = 0; i < oldInput.length; i++)
+				replacedCurrentChar = false;
+				for (var j = 0; j < replacements.length && !replacedCurrentChar; j++)					
 				{
-					replacedCurrentChar = false;
-					for (var j = 0; j < replacements.length && !replacedCurrentChar; j++)					
+					if (oldInput.substring(i, i + replacements[j][0].length) == replacements[j][0])
 					{
-						if (oldInput.substring(i, i + replacements[j][0].length) == replacements[j][0])
-						{
-							newInput += replacements[j][1];
-							i += replacements[j][0].length; // Skip as many characters as we read in.
-							replacedCurrentChar = true;
-						}
-					}
-					if (!replacedCurrentChar)
-					{
-						newInput += oldInput.charAt(i);
+						newInput += replacements[j][1];
+						i += replacements[j][0].length; // Skip as many characters as we read in.
+						replacedCurrentChar = true;
 					}
 				}
-				document.getElementById("userInputBox").value = newInput;
+				if (!replacedCurrentChar)
+				{
+					newInput += oldInput.charAt(i);
+				}
 			}
+			document.getElementById("userInputBox").value = newInput;
+		
 		}
 
 		// Some users may prefer seeing the characters change as they type.

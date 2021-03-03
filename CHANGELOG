@@ -38,3 +38,6 @@ At the same time the following orthographies have been added: French, Spanish or
 2021-03-02 v1.20
 - Generate a spreadsheet formula (useful for people who use spreadsheet applications)
 - Generate terminal command using Python 3 (for people who work on the command line)
+
+2021-03-03 v1.21
+- Fix bug where second character input by user was being ignored. As of this version, it is no longer ignored.

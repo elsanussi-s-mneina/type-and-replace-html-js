@@ -1,5 +1,4 @@
-		replacements = 
-			[
+[
             // See: https://en.wikipedia.org/wiki/French_orthography
             // Àà, Ââ, Ææ
             // Çç
