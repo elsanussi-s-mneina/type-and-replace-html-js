@@ -1,0 +1,17 @@
+		replacements = 
+			[
+			// See special letters section at: https://en.wikipedia.org/wiki/German_orthography
+			// Ä	ä
+			// Ö	ö
+			// Ü	ü
+			// ẞ	ß
+			["ae'", "ä"],
+			["Ae'", "Ä"],
+			["AE'", "Ä"],
+			["oe'", "ö"],
+			["Oe'", "Ö"],
+			["OE'", "Ö"],
+			["ss'", "ß"],
+			["Ss'", "ẞ"],
+			["SS'", "ẞ"]
+			];

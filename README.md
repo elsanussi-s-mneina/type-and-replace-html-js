@@ -9,7 +9,7 @@ Currently implemented:
 - Berber Latin Alphabet
 - French
 - Modern South Arabian Languages: Mehri and Soqotri
-
+- German
 
 
 ## How to run the generator in Unix like OS:
