@@ -18,3 +18,6 @@ for the name of the language, and another for the substitutions that it supports
 edit the shell script "generateWebPages.sh" and run it, and it should produce a suitable result.
 
 At the same time the following orthographies have been added: French, Spanish or Portuguese, Maltese and Berber Latin alphabet.
+
+2021-03-02 (no version change still v1.10)
+- Add modern south arabian languages: Mehri and Soqotri

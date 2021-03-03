@@ -7,7 +7,12 @@ Currently implemented:
 - ISO-233 Romanization (for Arabic)
 - Spanish or Portuguese
 - Berber Latin Alphabet
-- French## How to run the generator in Unix like OS:
+- French
+- Modern South Arabian Languages: Mehri and Soqotri
+
+
+
+## How to run the generator in Unix like OS:
 
 1. Open the terminal.
 2. Change the permissions by running the following command:

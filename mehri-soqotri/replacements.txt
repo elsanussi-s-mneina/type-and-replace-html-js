@@ -1,0 +1,15 @@
+[
+			// See the wikipedia page for the special characters
+			// needed for Modern South Arabian languages: https://en.wikipedia.org/wiki/Mehri_language
+			["\u062B\u062B\u062B", "\u069B"], // ARABIC LETTER THEH thrice, becomes ARABIC LETTER SEEN WITH THREE DOTS BELOW
+			["\u0636\u0636\u0636", "\u069E"], // ARABIC LETTER DAD thrice, becomes ARABIC LETTER SAD WITH THREE DOTS ABOVE
+			["\u0638\u0638\u0638", "\u069F"], // ARABIC LETTER ZAH thrice, becomes ARABIC LETTER DAD WITH THREE DOTS ABOVE
+			["\u0630\u0630\u0630", "\u0686"], // ARABIC LETTER THAL thrice, becomes ARABIC LETTER TCHEH 
+			["\u064A\u064A\u064A", "\u200E"], // ARABIC LETTER YEH thrice, becomesARABIC LETTER YEH WITH SMALL V
+			["\u062F\u062F\u062F", "\u068C"], // ARABIC LETTER DAL thrice, becomes ARABIC LETTER DAHAL
+			["\u0628\u0628\u0628", "\u067E"], // ARABIC LETTER BEH thrice, becomes ARABIC LETTER PEH
+
+			// The following letter is needed for Soqotri.
+			// https://en.wikipedia.org/wiki/Soqotri_language
+			["\u0644\u0644\u0644", "\u06B8"] // ARABIC LETTER LAM thrice, becomes ARABIC LETTER LAM WITH THREE DOTS BELOW
+			];
