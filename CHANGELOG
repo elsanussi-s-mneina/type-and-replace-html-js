@@ -23,3 +23,6 @@ At the same time the following orthographies have been added: French, Spanish or
 - Add modern south arabian languages: Mehri and Soqotri
 
 - Add support for German.
+
+2021-03-02 v1.11
+- Add padding to text area to make text clearer: (because the diacritics sometimes got cut off)
