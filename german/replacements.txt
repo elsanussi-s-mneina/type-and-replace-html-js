@@ -1,4 +1,3 @@
-		replacements = 
 			[
 			// See special letters section at: https://en.wikipedia.org/wiki/German_orthography
 			// Ä	ä
