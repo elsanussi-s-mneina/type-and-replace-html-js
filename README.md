@@ -7,4 +7,12 @@ Currently implemented:
 - ISO-233 Romanization (for Arabic)
 - Spanish or Portuguese
 - Berber Latin Alphabet
-- French
+- French## How to run the generator in Unix like OS:
+
+1. Open the terminal.
+2. Change the permissions by running the following command:
+
+`chmod +x generateWebPages.sh`
+
+3. Run the shell script by running the following command.
+`./generateWebPages.sh`
