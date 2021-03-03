@@ -15,6 +15,9 @@ python3 -c "import sys; orthographyName = open('icelandic/name.txt').read(); tit
 python3 -c "import sys; orthographyName = open('irish/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('irish/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./irishQuickTypist.html
 python3 -c "import sys; orthographyName = open('scottish-gaelic/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('scottish-gaelic/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./scottish-gaelicQuickTypist.html
 python3 -c "import sys; orthographyName = open('latin/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('latin/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./latinQuickTypist.html
+python3 -c "import sys; orthographyName = open('qamus-buckwalter/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('qamus-buckwalter/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./qamus-buckwalterTypist.html
+python3 -c "import sys; orthographyName = open('qamus-buckwalter-inverse/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('qamus-buckwalter-inverse/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./qamus-buckwalter-inverseTypist.html
+
 
 
 
