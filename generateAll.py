@@ -3,7 +3,7 @@
 # for a language.
 import sys
 from typing import List
-from generateWebPage import generateWebPageAndSave
+from generateWebPage import fillTemplate
 
 _typeAndReplaceTemplateFileName: str = "type_and_replace_template.html"
 _typeAndClickTemplateFileName: str = "type_and_click_template.html"
@@ -41,7 +41,7 @@ def generateTypeAndReplaceWebPages(directories):
     templateContents = open(_typeAndReplaceTemplateFileName, 'r').read()
 
     for directory in directories:
-        genFileContents = generateWebPageAndSave(directory, templateContents)
+        genFileContents = fillTemplate(directory, templateContents)
         open(getTypeAndReplaceHTMLPagePath(directory), 'w').write(genFileContents)
 
 
@@ -49,7 +49,7 @@ def generateTypeAndClickWebPages(directories):
     templateContents = open(_typeAndClickTemplateFileName, 'r').read()
 
     for directory in directories:
-        genFileContents = generateWebPageAndSave(directory, templateContents)
+        genFileContents = fillTemplate(directory, templateContents)
         open(getTypeAndClickHTMLPagePath(directory), 'w').write(genFileContents)
 
 
