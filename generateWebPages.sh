@@ -2,21 +2,21 @@
 # Uses template.html as a template, and replaces some text in it to make a new web page.
 # for each language.
 
-python3 -c "import sys; orthographyName = open('iso233/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('iso233/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./iso233QuickTypist.html
-python3 -c "import sys; orthographyName = open('berber-latin-alphabet/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('berber-latin-alphabet/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./berber-latin-alphabetQuickTypist.html
-python3 -c "import sys; orthographyName = open('french/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('french/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./frenchQuickTypist.html
-python3 -c "import sys; orthographyName = open('spanish/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('spanish/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./spanishQuickTypist.html
-python3 -c "import sys; orthographyName = open('maltese/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('maltese/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./malteseQuickTypist.html
-python3 -c "import sys; orthographyName = open('mehri-soqotri/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('mehri-soqotri/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./mehri-soqotriQuickTypist.html
-python3 -c "import sys; orthographyName = open('german/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('german/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./germanQuickTypist.html
-python3 -c "import sys; orthographyName = open('pinyin/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('pinyin/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./pinyinQuickTypist.html
-python3 -c "import sys; orthographyName = open('polish/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('polish/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./polishQuickTypist.html
-python3 -c "import sys; orthographyName = open('icelandic/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('icelandic/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./icelandicQuickTypist.html
-python3 -c "import sys; orthographyName = open('irish/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('irish/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./irishQuickTypist.html
-python3 -c "import sys; orthographyName = open('scottish-gaelic/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('scottish-gaelic/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./scottish-gaelicQuickTypist.html
-python3 -c "import sys; orthographyName = open('latin/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('latin/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./latinQuickTypist.html
-python3 -c "import sys; orthographyName = open('qamus-buckwalter/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('qamus-buckwalter/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./qamus-buckwalterTypist.html
-python3 -c "import sys; orthographyName = open('qamus-buckwalter-inverse/name.txt').read(); titled = sys.stdin.read().replace('ISO-233 Arabic Romanization Template', orthographyName); replacements = open('qamus-buckwalter-inverse/replacements.txt').read(); print(titled.replace('[[\'11\', \'2\']]', replacements));" < ./template.html > ./qamus-buckwalter-inverseTypist.html
+python3 generateWebPage.py iso233 < ./template.html > ./iso233QuickTypist.html
+python3 generateWebPage.py berber-latin-alphabet < ./template.html > ./berber-latin-alphabetQuickTypist.html
+python3 generateWebPage.py french < ./template.html > ./frenchQuickTypist.html
+python3 generateWebPage.py spanish < ./template.html > ./spanishQuickTypist.html
+python3 generateWebPage.py maltese < ./template.html > ./malteseQuickTypist.html
+python3 generateWebPage.py mehri-soqotri < ./template.html > ./mehri-soqotriQuickTypist.html
+python3 generateWebPage.py german < ./template.html > ./germanQuickTypist.html
+python3 generateWebPage.py pinyin < ./template.html > ./pinyinQuickTypist.html
+python3 generateWebPage.py polish < ./template.html > ./polishQuickTypist.html
+python3 generateWebPage.py icelandic < ./template.html > ./icelandicQuickTypist.html
+python3 generateWebPage.py irish < ./template.html > ./irishQuickTypist.html
+python3 generateWebPage.py scottish-gaelic < ./template.html > ./scottish-gaelicQuickTypist.html
+python3 generateWebPage.py latin < ./template.html > ./latinQuickTypist.html
+python3 generateWebPage.py qamus-buckwalter < ./template.html > ./qamus-buckwalterQuickTypist.html
+python3 generateWebPage.py qamus-buckwalter-inverse < ./template.html > ./qamus-buckwalter-inverseQuickTypist.html
 
 
 
