@@ -17,8 +17,6 @@ def generateWebPageAndSave(dirName, templateFileContents):
     replacements = open(dirName + '/replacements.txt').read()
     return titled.replace('[[\'11\', \'2\']]', replacements)
 
-
-
 if __name__ == "__main__":
     dirName = sys.argv[1] # 1st argument: should be name of directory in the current directory
     generateWebPage(dirName)

@@ -49,3 +49,9 @@ At the same time the following orthographies have been added: French, Spanish or
 
 2021-03-03 no change in version number
 - Separate Spanish and Portuguese instead of existing on a single page.
+
+2021-03-03 v1.22
+ - Remove stray apostrophe in replacement string for French (for capital cedilla)
+ - include name of app near version number in footer
+ - create a simpler to use alternative where no replacement occurs. Instead the user pushes buttons to enter non-ASCII characters.
+    - This is called Type and Click instead of Type and Replace.

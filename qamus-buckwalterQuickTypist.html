@@ -4,12 +4,20 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-	<title>Type and Replace: Berber Latin Alphabet</title>
+	<title>Type and Replace: Buckwalter Romanization (see Qamus.org)
+
+</title>
 </head>
 <body onload="setUp()" style="font-family: times">
 	<!-- We use times because Courier font does not display left half ring and right half ring correctly. It confuses them.-->
-	<h1>Type and Replace: Berber Latin Alphabet</h1>
-	<p>This is a page making it easier to type characters required for typing Berber Latin Alphabet. This page is intended to be useful when a person wants to type Berber Latin Alphabet but does not have the correct keyboard setup. When you do not have a special keyboard layout, you can come to this page, read the legend on this page, type text in the textbox, and press the button labelled "Replace".</p>	
+	<h1>Type and Replace: Buckwalter Romanization (see Qamus.org)
+
+</h1>
+	<p>This is a page making it easier to type characters required for typing Buckwalter Romanization (see Qamus.org)
+
+. This page is intended to be useful when a person wants to type Buckwalter Romanization (see Qamus.org)
+
+ but does not have the correct keyboard setup. When you do not have a special keyboard layout, you can come to this page, read the legend on this page, type text in the textbox, and press the button labelled "Replace".</p>	
 	<p>This page can be downloaded, and after downloading can run on a computer even without internet.</p>
 	
 	<h2>Type text</h2>
@@ -44,37 +52,56 @@
 		
 		replacements = 
 			[
-			["C'", "Č"],
-			["c'", "č"],
-			["D.", "Ḍ"],  // Ḍ	ḍ
-			["d.", "ḍ"],
+            // See: http://www.qamus.org/transliteration.htm
+			["\u0627", "A"], // ARABIC LETTER ALEF
+			["\u0628", "b"], // ARABIC LETTER BEH
+			["\u0629", "p"], // ARABIC LETTER TEH MARBUTA
+			["\u062A", "t"], // ARABIC LETTER TEH
+            ["\u062B", "v"], // ARABIC LETTER THEH
+			["\u062C", "j"], // ARABIC LETTER JEEM
+			["\u062D", "H"], // ARABIC LETTER HAH 
+			["\u062E", "x"], // ARABIC LETTER DAL
+			["\u062F", "d"], // ARABIC LETTER DAL
+			["\u0630", "*"], // ARABIC LETTER THAL
+			["\u0631", "r"], // ARABIC LETTER REH
+			["\u0632", "z"], // ARABIC LETTER ZAIN
+			["\u0633", "s"], // ARABIC LETTER SEEN
+			["\u0634", "$"], // ARABIC LETTER SHEEN
+			["\u0635", "S"], // ARABIC LETTER SAD
+			["\u0636", "D"], // ARABIC LETTER DAD
+			["\u0637", "T"], // ARABIC LETTER TAH
+			["\u0638", "Z"], // ARABIC LETTER ZAH
+			["\u0639", "E"], // ARABIC LETTER AIN
+            ["\u063A", "g"], // ARABIC LETTER GHAIN
+            ["\u0641", "f"], // ARABIC LETTER FEH
+            ["\u0642", "q"], // ARABIC LETTER QAF
+            ["\u0643", "k"], // ARABIC LETTER KAF
+            ["\u0644", "l"], // ARABIC LETTER LAM
+            ["\u0645", "m"], // ARABIC LETTER MEEM
+            ["\u0646", "n"], // ARABIC LETTER NOON
+            ["\u0647", "h"], // ARABIC LETTER HEH
+            ["\u0648", "w"], // ARABIC LETTER WAW
+            ["\u0649", "Y"], // ARABIC LETTER ALEF MAKSURA
+            ["\u064A", "y"], // ARABIC LETTER YEH
+            ["\u0621", "'"], // ARABIC LETTER HAMZA
+            ["\u0623", ">"], // ARABIC LETTER ALEF WITH HAMZA ABOVE
+            ["\u0625", "<"], // ARABIC LETTER ALEF WITH HAMZA BELOW
+            ["\u0624", "&"], // ARABIC LETTER WAW WITH HAMZA ABOVE
+            ["\u0626", "}"], // ARABIC LETTER YEH WITH HAMZA ABOVE
+            ["\u0622", "|"], // ARABIC LETTER ALEF WITH MADDA ABOVE
+            ["\u0671", "{"], // ARABIC LETTER ALEF WASLA
+            ["\u0670", "`"], // ARABIC LETTER SUPERSCRIPT ALEF
+            ["\u064E", "a"], // ARABIC FATHA
+            ["\u064F", "u"], // ARABIC DAMMA
+            ["\u0650", "i"], // ARABIC KASRA
+            ["\u064B", "F"], // ARABIC FATHATAN
+            ["\u064C", "N"], // ARABIC DAMMATAN
+            ["\u064D", "K"], // ARABIC KASRATAN
+            ["\u0651", "~"], // ARABIC SHADDA
+            ["\u0652", "o"], // ARABIC SUKUN
+            ["\u0640", "_"], // ARABIC TATWEEL
+			];
 
-			["T.", "Ṭ"],   // Ṭ	ṭ
-
-			["E_", "Ɛ"],
-			["e_", "ɛ"],
-			["G'", "Ǧ"], 
-			["g'", "ǧ"], 
-			["G_", "Ɣ"], 
-			["g_", "ɣ"], 
-
-            ["R'", "Ř"],
-			["r'", "ř"],
-            ["R.", "Ṛ"],
-			["r.", "ṛ"],
-			["w'", "ʷ"],
-			["H.", "Ḥ"], 
-			["h.'", "ḥ"], 
-			["T*", "Ţ"],
-			["t*", "ţ"], 
-			["Z*", "Z̧"],  // Š	š
-			["z*", "z̧"], 
-			["S.", "Ṣ"], // Ṣ	ṣ
-			["s.", "ṣ"], 
-			["t.", "ṭ"],  
-			["Z.", "Ẓ"],  // Ẓ	ẓ
-			["z.", "ẓ"],  
-			]
 		;
 
 		function createSpreadsheetFormula()

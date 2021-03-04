@@ -4,12 +4,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-	<title>Type and Replace: ISO-233 Arabic Romanization</title>
+	<title>Type and Click: ISO-233 Arabic Romanization</title>
 </head>
-<body onload="setUp()" style="font-family: times">
+<body onload="setUp()" style="font-family: times;">
 	<!-- We use times because Courier font does not display left half ring and right half ring correctly. It confuses them.-->
-	<h1>Type and Replace: ISO-233 Arabic Romanization</h1>
-	<p>This is a page making it easier to type characters required for typing ISO-233 Arabic Romanization. This page is intended to be useful when a person wants to type ISO-233 Arabic Romanization but does not have the correct keyboard setup. When you do not have a special keyboard layout, you can come to this page, read the legend on this page, type text in the textbox, and press the button labelled "Replace".</p>	
+	<h1>Type and Click: ISO-233 Arabic Romanization</h1>
+	<p>This is a page making it easier to type characters required for typing ISO-233 Arabic Romanization. This page is intended to be useful when a person wants to type ISO-233 Arabic Romanization but does not have the correct keyboard setup. When you do not have a special keyboard layout, you can come to this page, and press the buttons to type characters.</p>	
 	<p>This page can be downloaded, and after downloading can run on a computer even without internet.</p>
 	
 	<h2>Type text</h2>
@@ -17,30 +17,14 @@
 		<label for="userInputBox">Type Text into following box:</label>
 	</div>
 	<textarea id="userInputBox" oninput="reactToUserTypingCharacter()" cols="50" rows="10" aria-live="assertive" style="font-family: times; font-size: large; padding: 0.5em"></textarea>
-	<h2>Replace:</h2>
-	<button onclick="transformCharacters()">Replace</button>
+	<div id="moreCharactersPanel"></div>
 
-	<input type="checkbox" id="normalizeLock" name="normalizeLock" onclick="updateNormalizationLock();" checked> <label for="normalizeLock">Replace as you type.</label>
-
-	<!-- The following legend will be populated when the script runs. -->
-	<div id="legend" style="font-family: times; font-size: x-large">
-
-	</div>
-
-	<!-- The following will be populated with any extra information for our users. -->
-	<button onclick="viewExcelFormula()">Get Spreadsheet Formula to do this.</button>
-	<button onclick="viewPythonFormula()">Get Terminal Command to do this.</button>
-
-	<div id="extraGoodies" style="font-family: times; font-size: large">
-	</div>
 
 	<footer>
-		<p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/type-and-replace-html-js">Get source code and documentation: Type and Replace v1.22, (2021-03-04). Made by Elsanussi Mneina</a></p>
+		<p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/type-and-replace-html-js">Get source code and documentation: Type and Click v1.22, (2021-03-04). Made by Elsanussi Mneina</a></p>
 	</footer>
 
 	<script>
-		normalizationLock = false;
-		
 		
 		replacements = 
 			[
@@ -81,87 +65,45 @@
 			]
 		;
 
-		function createSpreadsheetFormula()
-		{
-			var extraGoodies = document.getElementById("extraGoodies");
-
-			var spreadsheetFormula = "B2";
-
-			for (var i = 0; i < replacements.length; i++)
-			{
-				spreadsheetFormula = "SUBSTITUTE(" + spreadsheetFormula + ", \"" + replacements[i][0] + "\", \"" + replacements[i][1] + "\")";
-			}
-
-			extraGoodies.innerHTML = "<h3>Equivalent Spreadsheet Formula</h3><p>The worksheet (Excel, LibreOffice) formula for converting text from cell B2 is =" + spreadsheetFormula + "</p>";
-		}
-
-
-		function encodeUnicodeString(aString)
-		{
-			outputString = "";
-			for (var i = 0; i < aString.length; i++)
-			{
-				var unicodeValueString = aString.codePointAt(i).toString(16);
-
-				while (unicodeValueString.length < 4)
-				{
-					unicodeValueString = "0" + unicodeValueString;
-				}
-				outputString += "\\u" + unicodeValueString;
-			}
-
-			return outputString;
-		}
-
-		function createPythonFormula()
-		{
-			var pythonFormula = ""
-
-			for (var i = 0; i < replacements.length; i++)
-			{
-				pythonFormula = pythonFormula + ".replace( \\\"" + encodeUnicodeString(replacements[i][0]) + "\\\", \\\"" + encodeUnicodeString(replacements[i][1]) + "\\\")";
-			}
-
-			pythonFormula = "import sys; print(sys.stdin.read()" + pythonFormula + ")";
-			var terminalFormula = "python3 -c \"" + pythonFormula + "\"" + " < ./inputFile.txt > ./outputFile.txt"
-			extraGoodies.innerHTML = "<h3>Equivalent Terminal Command using Python 3</h3><p>" + terminalFormula + "</p>";
-
-		}
-
-		function viewExcelFormula()
-		{
-			createSpreadsheetFormula();
-		}
-
-		function viewPythonFormula()
-		{
-			createPythonFormula();
-		}
-
 		function setUp()
 		{
-			setUpLegend();
-			// The following call ensures that the
-			// checkbox and normalization lock
-			// do not become out of sync after a page refresh.
-			updateNormalizationLock();
+			setUpMoreCharactersPanel();
 		}
 
-		// Places an explanation of what characters 
-		// change when normalization occurs.
-		// It places it as a legend the user can read.
-		function setUpLegend()
+		function setUpMoreCharactersPanel()
 		{
-			var legend = document.getElementById("legend");
+			var panel = document.getElementById("moreCharactersPanel");
 
-			var legendMarkup = "<h3>Legend</h3><ul>";
+			var panelMarkup = "<h2>More Characters</h2>\n<ul>";
+			
+			var characters = [];
 
 			for (var i = 0; i < replacements.length; i++)
 			{
-				legendMarkup += "\n<li>" + replacements[i][0] + " becomes " + replacements[i][1] + "</li>";
+				characters.push(replacements[i][1]);
 			}
 
-			legend.innerHTML = legendMarkup;
+			// If we had two buttons that put exactly the
+			// same text, the user will be confused.
+			// Therefore we remove duplicates.
+			characters = removeDuplicates(characters);
+
+			for (var i = 0; i < characters.length; i++)
+			{
+				panelMarkup += "\n<button onclick='typeTextIntoBox(\"" + characters[i] + "\");' style='font-size:x-large; margin: 0.4em; font-family:serif' >" + characters[i] + "</button>";
+			}
+
+			panel.innerHTML = panelMarkup;
+		}
+
+		function typeTextIntoBox(character)
+		{
+			// Append the text to the end of the text in the
+			// text box.
+			// Note: this is not the ideal solution for the situation
+			// where the user wants to add a character in the middle
+			// of the text.
+			document.getElementById("userInputBox").value += character;
 		}
 
 		function transformCharacters()
@@ -189,6 +131,27 @@
 			}
 			document.getElementById("userInputBox").value = newInput;
 		
+		}
+
+		// A function that takes an array
+		// and returns a similar array but without
+		// any duplicate elements.
+		function removeDuplicates(anArray)
+		{
+			var table = {};
+			var anArrayWithoutDuplicates = [];
+
+			for (var i = 0; i < anArray.length; i++)
+			{
+				table[anArray[i]] = true;
+			}
+
+			for (var key in table)
+			{
+				anArrayWithoutDuplicates.push(key);
+			}
+
+			return anArrayWithoutDuplicates;
 		}
 
 		// Some users may prefer seeing the characters change as they type.
