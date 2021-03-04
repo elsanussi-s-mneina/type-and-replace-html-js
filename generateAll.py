@@ -48,8 +48,8 @@ def generateIndexPage(directories: List[str]) -> str:
     """
     fileContents: str = ""
     for directory in directories:
-        fileContents += "<li><a href='" + typeAndReplaceFileName(directory) +"'>" + directory + "(quick)</a></li>\n"
-        fileContents += "<li><a href='" + typeAndClickFileName(directory) +"'>" + directory + " (simple)</a></li>\n"
+        fileContents += "<li><a href='" + typeAndReplaceFileName(directory) +"'>" + directory + " (Type and Replace)</a></li>\n"
+        fileContents += "<li><a href='" + typeAndClickFileName(directory) +"'>" + directory + " (Type and Click)</a></li>\n"
 
     open(_generatedPath + "index.html", "w").write(fileContents)
 
