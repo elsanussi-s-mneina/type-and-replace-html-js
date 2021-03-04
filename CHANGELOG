@@ -42,3 +42,7 @@ At the same time the following orthographies have been added: French, Spanish or
 2021-03-03 v1.21
 - Fix bug where second character input by user was being ignored. As of this version, it is no longer ignored.
 - Implement Buckwalter transliteration system (a reversible romanization system for Arabic) (both ways)
+
+2021-03-03 no change in version number
+- Refactor code for generating web pages.
+- New feature: generate an index page with links to generated web applications.
