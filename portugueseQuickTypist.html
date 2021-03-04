@@ -4,12 +4,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 
-	<title>Type and Replace: Spanish</title>
+	<title>Type and Replace: Portuguese</title>
 </head>
 <body onload="setUp()" style="font-family: times">
 	<!-- We use times because Courier font does not display left half ring and right half ring correctly. It confuses them.-->
-	<h1>Type and Replace: Spanish</h1>
-	<p>This is a page making it easier to type characters required for typing Spanish. This page is intended to be useful when a person wants to type Spanish but does not have the correct keyboard setup. When you do not have a special keyboard layout, you can come to this page, read the legend on this page, type text in the textbox, and press the button labelled "Replace".</p>	
+	<h1>Type and Replace: Portuguese</h1>
+	<p>This is a page making it easier to type characters required for typing Portuguese. This page is intended to be useful when a person wants to type Portuguese but does not have the correct keyboard setup. When you do not have a special keyboard layout, you can come to this page, read the legend on this page, type text in the textbox, and press the button labelled "Replace".</p>	
 	<p>This page can be downloaded, and after downloading can run on a computer even without internet.</p>
 	
 	<h2>Type text</h2>
@@ -44,24 +44,24 @@
 		
 		replacements = 
 			[
-    // https://en.wikipedia.org/wiki/Spanish_orthography
-    //   ⟨á⟩, ⟨é⟩, ⟨í⟩, ⟨ó⟩, ⟨ú⟩, ⟨ñ⟩, ⟨Ñ⟩, ⟨ü⟩, ⟨Ü⟩, ⟨¿⟩, and ⟨¡⟩.
+            // https://en.wikipedia.org/wiki/Portuguese_orthography
+            // Portuguese makes use of five diacritics: the cedilla (ç), acute accent (á, é, í, ó, ú), circumflex accent (â, ê, ô), tilde (ã, õ), and grave accent (à, and rarely è, ì, ò, and ù).
             ["&A'", "Á"],
 			["&a'", "á"],
-			["&E'", "É"], 
-			["&e'", "é"],
-			["&I'", "Í"], 
-			["&i'", "í"],
-			["&O'", "Ó"], 
-			["&o'", "ó"],
+            ["&A^", "Â"],
+            ["&a^", "â"],
+            ["&An", "ã"],
+            ["&an", "Ã"],
+            ["&'A", "À"],
+            ["&'a", "à"],
+			["C,", "Ç"], 
+			["c,", "ç"],
+            ["&O^", "Ô"],
+            ["&o^", "ô"],
+            ["&On", "Õ"],
+            ["&on", "õ"],
 			["&U'", "Ú"],
 			["&u'", "ú"], 
-			["&Nn", "Ñ"],
-			["&nn", "ñ"],
-			["&U:", "Ü"],
-			["&u:", "ü"],
-			["&?", "¿"],
-			["&!", "¡"],
 			];
 
 		;

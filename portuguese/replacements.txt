@@ -1,0 +1,20 @@
+[
+            // https://en.wikipedia.org/wiki/Portuguese_orthography
+            // Portuguese makes use of five diacritics: the cedilla (ç), acute accent (á, é, í, ó, ú), circumflex accent (â, ê, ô), tilde (ã, õ), and grave accent (à, and rarely è, ì, ò, and ù).
+            ["&A'", "Á"],
+			["&a'", "á"],
+            ["&A^", "Â"],
+            ["&a^", "â"],
+            ["&An", "ã"],
+            ["&an", "Ã"],
+            ["&'A", "À"],
+            ["&'a", "à"],
+			["C,", "Ç"], 
+			["c,", "ç"],
+            ["&O^", "Ô"],
+            ["&o^", "ô"],
+            ["&On", "Õ"],
+            ["&on", "õ"],
+			["&U'", "Ú"],
+			["&u'", "ú"], 
+			];
