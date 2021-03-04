@@ -9,11 +9,18 @@ _typeAndReplaceTemplateFileName: str = "template.html"
 _typeAndClickTemplateFileName: str = "type_and_click_template.html"
 _generatedPath = "generated/"
 
-def getTypeAndReplaceHTMLPageName(directory: str):
-    return _generatedPath + directory + "QuickTypist.html"
+def getTypeAndReplaceHTMLPageName(language: str):
+    return language + "QuickTypist.html"
 
-def getTypeAndClickHTMLPageName(directory: str):
-    return _generatedPath + directory + "ClickTypist.html"
+def getTypeAndClickHTMLPageName(language: str):
+    return language + "ClickTypist.html"
+
+def getTypeAndReplaceHTMLPagePath(language: str):
+    return _generatedPath + getTypeAndReplaceHTMLPageName(language)
+
+def getTypeAndClickHTMLPagePath(language: str):
+    return _generatedPath + getTypeAndClickHTMLPageName(language)
+
 
 def generateIndexPage(directories: List[str]):
     fileContents = ""
@@ -35,7 +42,7 @@ def generateTypeAndReplaceWebPages(directories):
 
     for directory in directories:
         genFileContents = generateWebPageAndSave(directory, templateContents)
-        open(getTypeAndReplaceHTMLPageName(directory), 'w').write(genFileContents)
+        open(getTypeAndReplaceHTMLPagePath(directory), 'w').write(genFileContents)
 
 
 def generateTypeAndClickWebPages(directories):
@@ -43,22 +50,7 @@ def generateTypeAndClickWebPages(directories):
 
     for directory in directories:
         genFileContents = generateWebPageAndSave(directory, templateContents)
-        open(getTypeAndClickHTMLPageName(directory), 'w').write(genFileContents)
-
-def moveAllGeneratedFilesIntoGeneratedDirectory(directories):
-    import os
-    
-    for directory in directories:        
-        oldPath = getTypeAndClickHTMLPageName(directory).replace("generated/", "")
-        newPath = getTypeAndClickHTMLPageName(directory)
-        command: str = "git mv " + oldPath + " " + newPath
-        os.system(command)
-
-        oldPath = getTypeAndReplaceHTMLPageName(directory).replace("generated/", "")
-        newPath = getTypeAndReplaceHTMLPageName(directory)
-        command: str = "git mv " + oldPath + " " + newPath
-        os.system(command)
-
+        open(getTypeAndClickHTMLPagePath(directory), 'w').write(genFileContents)
 
 
 if __name__ == "__main__":
