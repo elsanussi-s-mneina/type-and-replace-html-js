@@ -5,7 +5,7 @@ import sys
 from typing import List
 from generateWebPage import generateWebPageAndSave
 
-_typeAndReplaceTemplateFileName: str = "template.html"
+_typeAndReplaceTemplateFileName: str = "type_and_replace_template.html"
 _typeAndClickTemplateFileName: str = "type_and_click_template.html"
 _generatedPath = "generated/"
 
