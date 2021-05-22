@@ -2,12 +2,17 @@
 # Replaces some text in it to make a new web page.
 # for a language.
 import sys
+import os
 from typing import List
 from generateWebPage import fillTemplate
 
 # You will need to modify the following line if you add or remove a language (directory).
-_languageDirectories: List[str] = ["berber-latin-alphabet","french","german","icelandic","irish","iso233","latin","maltese","mehri-soqotri","pinyin","polish","qamus-buckwalter","qamus-buckwalter-inverse","scottish-gaelic","spanish", "portuguese"]
+_languageDirectories: List[str] = ["berber-latin-alphabet","french","german","icelandic","irish","iso233","latin","maltese","mehri-soqotri","pinyin","polish","scottish-gaelic","spanish", "portuguese"]
 
+# The following is for situations where it does not make sense to have
+# the type-and-click application generated. This may be useful for transliteration systems
+# that use ASCII characters for one of their sides.
+_languagesTypeAndReplaceOnly : List[str] = ["qamus-buckwalter","qamus-buckwalter-inverse"]
 
 _typeAndReplaceTemplatePath: str = "type_and_replace_template.html"
 _typeAndClickTemplatePath: str = "type_and_click_template.html"
@@ -49,7 +54,8 @@ def generateIndexPage(directories: List[str]) -> str:
     fileContents: str = ""
     for directory in directories:
         fileContents += "<li><a href='" + typeAndReplaceFileName(directory) +"'>" + directory + " (Type and Replace)</a></li>\n"
-        fileContents += "<li><a href='" + typeAndClickFileName(directory) +"'>" + directory + " (Type and Click)</a></li>\n"
+        if (directory not in _languagesTypeAndReplaceOnly):
+            fileContents += "<li><a href='" + typeAndClickFileName(directory) +"'>" + directory + " (Type and Click)</a></li>\n"
 
     open(_generatedPath + "index.html", "w").write(fileContents)
 
@@ -94,4 +100,9 @@ def generateTypeAndClickWebPages(directories) -> None:
 
 # The following runs if this module is run as the main module:
 if __name__ == "__main__":
-    generateAll(_languageDirectories)
+    # Generate all of them
+    generateAll(_languageDirectories + _languagesTypeAndReplaceOnly)
+
+    # but remove those that should not have a type and click app after the fact.
+    for directory in _languagesTypeAndReplaceOnly:
+        os.remove(typeAndClickPath(directory))

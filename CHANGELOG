@@ -58,3 +58,5 @@ At the same time the following orthographies have been added: French, Spanish or
     
 2021-05-21 v1.24
   - Bug fix: no longer skip every second character when transliterating.
+  - No longer generate useless Type-and-click app for Buckwalter transliteration system. Only the type-and-replace one.
+  - Remove dead code from the type and click app.
