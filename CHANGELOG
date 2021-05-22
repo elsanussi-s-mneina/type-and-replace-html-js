@@ -55,3 +55,6 @@ At the same time the following orthographies have been added: French, Spanish or
  - include name of app near version number in footer
  - create a simpler to use alternative where no replacement occurs. Instead the user pushes buttons to enter non-ASCII characters.
     - This is called Type and Click instead of Type and Replace.
+    
+2021-05-21 v1.24
+  - Bug fix: no longer skip every second character when transliterating.
