@@ -78,8 +78,11 @@ def generateTypeAndReplaceWebPages(directories) -> None:
     """
     templateContents = open(_typeAndReplaceTemplatePath, 'r').read()
 
+    scriptPath = _typeAndReplaceTemplatePath.replace('_template.html', ".js")
+    scriptContents = open(scriptPath, 'r').read()
+    
     for directory in directories:
-        genFileContents = fillTemplate(directory, templateContents)
+        genFileContents = fillTemplate(directory, templateContents, scriptContents)
         open(typeAndReplacePath(directory), 'w').write(genFileContents)
 
 
@@ -93,8 +96,11 @@ def generateTypeAndClickWebPages(directories) -> None:
     """
     templateContents = open(_typeAndClickTemplatePath, 'r').read()
 
+    scriptPath = _typeAndClickTemplatePath.replace('_template.html', ".js")
+    scriptContents = open(scriptPath, 'r').read()
+
     for directory in directories:
-        genFileContents = fillTemplate(directory, templateContents)
+        genFileContents = fillTemplate(directory, templateContents, scriptContents)
         open(typeAndClickPath(directory), 'w').write(genFileContents)
 
 
