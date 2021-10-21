@@ -3,7 +3,7 @@
 <html lang='en'>
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Type and Click: Pinyin</title>
 </head>
 <body onload="setUp()" style="font-family: times;">
@@ -21,7 +21,7 @@
 
 
 	<footer>
-		<p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/type-and-replace-html-js">Get source code and documentation: Type and Click v1.22, (2021-03-04). Made by Elsanussi Mneina</a></p>
+		<p><a style="font-size: x-small; margin-left: 5em" href="https://github.com/elsanussi-s-mneina/type-and-replace-html-js">Get source code and documentation: Type and Click v1.24, (2021-05-21). Made by Elsanussi Mneina</a></p>
 	</footer>
 
 	<script>
@@ -141,32 +141,6 @@
 			document.getElementById("userInputBox").value += character;
 		}
 
-		function transformCharacters()
-		{
-			var oldInput = document.getElementById("userInputBox").value;
-		
-			var newInput = "";
-			var replacedCurrentChar = false;
-			for (var i = 0; i < oldInput.length; i++)
-			{
-				replacedCurrentChar = false;
-				for (var j = 0; j < replacements.length && !replacedCurrentChar; j++)					
-				{
-					if (oldInput.substring(i, i + replacements[j][0].length) == replacements[j][0])
-					{
-						newInput += replacements[j][1];
-						i += replacements[j][0].length; // Skip as many characters as we read in.
-						replacedCurrentChar = true;
-					}
-				}
-				if (!replacedCurrentChar)
-				{
-					newInput += oldInput.charAt(i);
-				}
-			}
-			document.getElementById("userInputBox").value = newInput;
-		
-		}
 
 		// A function that takes an array
 		// and returns a similar array but without
@@ -189,20 +163,6 @@
 			return anArrayWithoutDuplicates;
 		}
 
-		// Some users may prefer seeing the characters change as they type.
-		// This function along with a checkbox allow this behaviour.
-		function updateNormalizationLock()
-		{
-			normalizationLock = document.getElementById("normalizeLock").checked;
-		}
-
-		function reactToUserTypingCharacter()
-		{
-			if (normalizationLock)
-			{
-				transformCharacters();
-			}
-		}
 	</script>
 </body>
 </html>
