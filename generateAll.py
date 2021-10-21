@@ -7,7 +7,7 @@ from typing import List
 from generateWebPage import fillTemplate
 
 # You will need to modify the following line if you add or remove a language (directory).
-_languageDirectories: List[str] = ["berber-latin-alphabet","french","german","icelandic","irish","iso233","latin","maltese","mehri-soqotri","pinyin","polish","scottish-gaelic","spanish", "portuguese"]
+_languageDirectories: List[str] = ["berber-latin-alphabet","french","german","icelandic","irish","iso233","latin","maltese","mehri-soqotri","pinyin","polish","scottish-gaelic","spanish", "portuguese", "experiment1", "experiment2", "experiment3"]
 
 # The following is for situations where it does not make sense to have
 # the type-and-click application generated. This may be useful for transliteration systems
