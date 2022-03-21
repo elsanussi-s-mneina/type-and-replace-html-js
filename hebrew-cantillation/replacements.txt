@@ -1,0 +1,106 @@
+[
+["₪אתנחתא‎₪","\u0591"],["%HEBREW ACCENT ETNAHTA%","\u0591"],
+["₪סגולתא‎₪","\u0592"],["%HEBREW ACCENT SEGOL%","\u0592"],
+["₪שלשלת‎₪","\u0593"],["%HEBREW ACCENT SHALSHELET%","\u0593"],
+["₪זקף קטן‎₪","\u0594"],["%HEBREW ACCENT ZAQEF QATAN%","\u0594"],
+["₪זקף גדול‎₪","\u0595"],["%HEBREW ACCENT ZAQEF GADOL%","\u0595"],
+["₪טפחא‎₪","\u0596"],["%HEBREW ACCENT TIPEHA%","\u0596"],
+["₪רביע‎₪","\u0597"],["%HEBREW ACCENT REVIA%","\u0597"],
+["₪צנורת₪","\u0598"],["%HEBREW ACCENT ZARQA%","\u0598"],
+["₪פשטא‎₪","\u0599"],["%HEBREW ACCENT PASHTA%","\u0599"],
+["₪יתיב‎₪","\u059A"],["%HEBREW ACCENT YETIV%","\u059A"],
+["₪תביר‎₪","\u059B"],["%HEBREW ACCENT TEVIR%","\u059B"],
+["₪אזלא-גרש‎‎₪","\u059C"],["%HEBREW ACCENT GERESH%","\u059C"],
+["₪גרש מקדם₪","\u059D"],["%HEBREW ACCENT GERESH MUQDAM%","\u059D"],
+["₪גרשים‎₪","\u059E"],["%HEBREW ACCENT GERSHAYIM%","\u059E"],
+["₪קרני פרה‎₪","\u059F"],["%HEBREW ACCENT QARNEY PARA%","\u059F"],
+["₪תלישא גדולה‎₪","\u05A0"],["%HEBREW ACCENT TELISHA GEDOLA%","\u05A0"],
+["₪פזר‎₪","\u05A1"],["%HEBREW ACCENT PAZER%","\u05A1"],
+["₪אתנח הפוך₪","\u05A2"],["%HEBREW ACCENT ATNAH HAFUKH%","\u05A2"],
+["₪מנח‎₪","\u05A3"],["%HEBREW ACCENT MUNAH%","\u05A3"],
+["₪מהפך‎₪","\u05A4"],["%HEBREW ACCENT MAHAPAKH%","\u05A4"],
+["₪מרכא‎₪","\u05A5"],["%HEBREW ACCENT MERKHA%","\u05A5"],
+["₪מרכא כפולה‎₪","\u05A6"],["%HEBREW ACCENT MERKHA KEFULA%","\u05A6"],
+["₪דרגא‎₪","\u05A7"],["%HEBREW ACCENT DARGA%","\u05A7"],
+["₪קדמא‎₪","\u05A8"],["%HEBREW ACCENT QADMA%","\u05A8"],
+["₪תלישא קטנה ‎₪","\u05A9"],["%HEBREW ACCENT TELISHA QETANA%","\u05A9"],
+["₪ירח בן יומו‎₪","\u05AA"],["%HEBREW ACCENT YERAH BEN YOMO%","\u05AA"],
+["₪עולה₪","\u05AB"],["%HEBREW ACCENT OLE%","\u05AB"],
+["₪עלוי₪","\u05AC"],["%HEBREW ACCENT ILUY%","\u05AC"],
+["₪דחי₪","\u05AD"],["%HEBREW ACCENT DEHI%","\u05AD"],
+["₪זרקא‎₪","\u05AE"],["%HEBREW ACCENT ZINOR%","\u05AE"],
+
+["₪שוא₪","\u05B0"],["%HEBREW POINT SHEVA%","\u05B0"],
+["₪חטף סגול₪","\u05B1"],["%HEBREW POINT HATAF SEGOL%","\u05B1"],
+["₪חטף פתח₪","\u05B2"],["%HEBREW POINT HATAF PATAH%","\u05B2"],
+["₪חטף קמץ₪","\u05B3"],["%HEBREW POINT HATAF QAMATS%","\u05B3"],
+["₪חיריק₪","\u05B4"],["%HEBREW POINT HIRIQ%","\u05B4"],
+["₪צירי₪","\u05B5"],["%HEBREW POINT TSERE%","\u05B5"],
+["₪סגול₪","\u05B6"],["%HEBREW POINT SEGOL%","\u05B6"],
+["₪פתח₪","\u05B7"],["%HEBREW POINT PATAH%","\u05B7"],
+["₪קמץ גדול₪","\u05B8"],["%HEBREW POINT QAMATS%","\u05B8"],
+["₪חולם₪","\u05B9"],["%HEBREW POINT HOLAM%","\u05B9"],
+
+["₪קבוץ₪","\u05BB"],["%HEBREW POINT QUBUTS%","\u05BB"],
+["₪דגש₪","\u05BC"],["%HEBREW POINT DAGESH OR MAPIQ%","\u05BC"],
+
+
+["₪רפה₪","\u05BF"],["%HEBREW POINT RAFE%","\u05BF"],
+["₪מנח לגרמה₪","\u05C0"],["%HEBREW PUNCTUATION PASEQ%","\u05C0"],
+["₪שי״ן ימנית₪","\u05C1"],["%HEBREW POINT SHIN DOT%","\u05C1"],
+["₪שי״ן שמאלית₪","\u05C2"],["%HEBREW POINT SIN DOT%","\u05C2"],
+["₪סוף פסוק‎₪","\u05C3"],["%HEBREW PUNCTUATION SOF PASUQ%","\u05C3"],
+
+
+
+["₪קמץ קטן₪","\u05C7"],["%HEBREW POINT QAMATS QATAN%","\u05C7"],
+
+
+
+
+
+
+
+
+["%ALEF%","\u05D0"],["%HEBREW LETTER ALEF%","\u05D0"],
+["%BET%","\u05D1"],["%HEBREW LETTER BET%","\u05D1"],
+["%GIMEL%","\u05D2"],["%HEBREW LETTER GIMEL%","\u05D2"],
+["%DALET%","\u05D3"],["%HEBREW LETTER DALET%","\u05D3"],
+["%HE%","\u05D4"],["%HEBREW LETTER HE%","\u05D4"],
+["%VAV%","\u05D5"],["%HEBREW LETTER VAV%","\u05D5"],
+["%ZAYIN%","\u05D6"],["%HEBREW LETTER ZAYIN%","\u05D6"],
+["%HET%","\u05D7"],["%HEBREW LETTER HET%","\u05D7"],
+["%TET%","\u05D8"],["%HEBREW LETTER TET%","\u05D8"],
+["%YOD%","\u05D9"],["%HEBREW LETTER YOD%","\u05D9"],
+["%FINAL KAF%","\u05DA"],["%HEBREW LETTER FINAL KAF%","\u05DA"],
+["%KAF%","\u05DB"],["%HEBREW LETTER KAF%","\u05DB"],
+["%LAMED%","\u05DC"],["%HEBREW LETTER LAMED%","\u05DC"],
+["%FINAL MEM%","\u05DD"],["%HEBREW LETTER FINAL MEM%","\u05DD"],
+["%MEM%","\u05DE"],["%HEBREW LETTER MEM%","\u05DE"],
+["%FINAL NUN%","\u05DF"],["%HEBREW LETTER FINAL NUN%","\u05DF"],
+["%NUN%","\u05E0"],["%HEBREW LETTER NUN%","\u05E0"],
+["%SAMEKH%","\u05E1"],["%HEBREW LETTER SAMEKH%","\u05E1"],
+["%AYIN%","\u05E2"],["%HEBREW LETTER AYIN%","\u05E2"],
+["%FINAL PE%","\u05E3"],["%HEBREW LETTER FINAL PE%","\u05E3"],
+["%PE%","\u05E4"],["%HEBREW LETTER PE%","\u05E4"],
+["%FINAL TSADI%","\u05E5"],["%HEBREW LETTER FINAL TSADI%","\u05E5"],
+["%TSADI%","\u05E6"],["%HEBREW LETTER TSADI%","\u05E6"],
+["%QOF%","\u05E7"],["%HEBREW LETTER QOF%","\u05E7"],
+["%RESH%","\u05E8"],["%HEBREW LETTER RESH%","\u05E8"],
+["%SHIN%","\u05E9"],["%HEBREW LETTER SHIN%","\u05E9"],
+["%TAV%","\u05EA"],["%HEBREW LETTER TAV%","\u05EA"],
+
+
+
+
+
+["₪צוי וו₪","\u05F0"],["%HEBREW LIGATURE YIDDISH DOUBLE VAV%","\u05F0"],
+["₪וו יוד₪","\u05F1"],["%HEBREW LIGATURE YIDDISH VAV YOD%","\u05F1"],
+["₪צוי יוד₪","\u05F2"],["%HEBREW LIGATURE YIDDISH DOUBLE YOD%","\u05F2"],
+["₪גרש‎‎₪","\u05F3"],["%HEBREW PUNCTUATION GERESH%","\u05F3"],
+["₪גרשים‎₪","\u05F4"],["%HEBREW PUNCTUATION GERSHAYIM%","\u05F4"],
+["₪יוד‎ עם חיריק₪","\uFB1D"],["%HEBREW LETTER YOD WITH HIRIQ%","\uFB1D"],
+["₪וריקה₪","\uFB1E"],["%HEBREW POINT JUDEO-SPANISH VARIKA%","\uFB1E"],
+["₪פסך צוי יודן₪","\uFB1F"],["%HEBREW LIGATURE YIDDISH YOD YOD PATAH%","\uFB1F"],
+
+];
