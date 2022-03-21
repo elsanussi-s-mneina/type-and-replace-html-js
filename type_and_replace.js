@@ -4,7 +4,6 @@
 		replacements = 
 			[['11', '2']]
 		;
-
 		function createSpreadsheetFormula()
 		{
 			var extraGoodies = document.getElementById("extraGoodies");
@@ -88,6 +87,24 @@
 			legend.innerHTML = legendMarkup;
 		}
 
+
+		// Remove invisible bidirectional text control characters
+		function removeInvisibles(text) {
+			return text.replace(/[\u200E\u200F\u061C\u202A\u202D\u202B\u202E\u202C\u2066\u2067\u2068\u2069]/g, "");
+		}
+
+		// The following function is necessary because for right-to-left languages
+		// and bidirectional text, often invisible characters such as U+200E
+		// interfere making certain strings unequal even though they seem equal to the eyes.
+		// We need to do this or else users will be puzzled by why the replacement is not working.
+		function equalsIgnoreInvisibles(left, right) {
+			if (left === right) {
+				return true;
+			} else {
+				return removeInvisibles(left) === removeInvisibles(right);
+			}
+		}
+
 		function transformCharacters()
 		{
 			var oldInput = document.getElementById("userInputBox").value;
@@ -99,7 +116,7 @@
 				replacedCurrentChar = false;
 				for (var j = 0; j < replacements.length && !replacedCurrentChar; j++)					
 				{
-					if (oldInput.substring(i, i + replacements[j][0].length) === replacements[j][0])
+					if (equalsIgnoreInvisibles(oldInput.substring(i, i + replacements[j][0].length), replacements[j][0]))
 					{
 						newInput += replacements[j][1];
 						i += replacements[j][0].length - 1; // Skip as many characters as we read in., we subtract 1 because the outer for loop will add one for us.
