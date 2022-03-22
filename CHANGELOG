@@ -60,3 +60,16 @@ At the same time the following orthographies have been added: French, Spanish or
   - Bug fix: no longer skip every second character when transliterating.
   - No longer generate useless Type-and-click app for Buckwalter transliteration system. Only the type-and-replace one.
   - Remove dead code from the type and click app.
+  
+2022-03-21 v1.25
+  - Bug fix: ignore invisible characters when comparing strings for equality
+      - this bug was discovered while creating text replacement tokens that used characters of different directionality, while creating text replacement methods for Arabic and Hebrew
+  - Aside: I did not run the Python script to generate the Arabic or Hebrew type and replace web pages, because I don't have access to it at the time.
+  - I created an input method for generating Hebrew diacritics and special symbols. Although the vowel and gemination diacritics are available on various commonly available Hebrew keyboards, 
+  most people are unaware of them or how to type them. Therefore I created an easy to learn, but slow to type input method for typing these characters. It uses the full name of the diacritic in English and Hebrew as a super simple mnemonic. 
+  It also uses the percent character around the English word as though it were an escape sequence e.g. %HEBREW LETTER ALEF%. For Hebrew it uses the Hebrew Sheqel symbol instead. Note I put it both before and after the word,
+  because users are likely to get confused depending on what text direction their paragraph is written in, if I only required the sheqel symbol before.
+  - I created an input method similarly for Arabic. Note, there are more Arabic diacritics not covered, but I focussed mostly on the ones in the most common religious texts of the religion of Islam, 
+  and its most popular edition in Canada ("Reading according to Hafs"). More work is needed verifying the correctness of the Arabic names of the characters. Unfortunately I could not find a definitive source for
+  many of the names  of the characters provided by Unicode in Arabic. 
+      
